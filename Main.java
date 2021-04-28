@@ -1,5 +1,5 @@
-//import ./CTExercicio1/Triatleta;
-//import ./CTExercicio2/ContaPoupanca;
+import CTExercicio1.*;
+import CTExercicio2.*;
 
 public class Main {
   public static void main (String[] args) {

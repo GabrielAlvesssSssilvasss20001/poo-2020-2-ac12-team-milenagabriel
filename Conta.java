@@ -1,16 +1,22 @@
+package CTExercicio2;
+
 public abstract class Conta {
-  public Cliente titular;  
+  public String nome_titular;
+  public String cpf_titular;
   public double saldo;
   public int numero;
 
-  public Conta (Cliente titular){
-    this.titular = titular;
+  public Conta (String nome_titular, String cpf_titular){
+    this.nome_titular = nome_titular;
+    this.cpf_titular = cpf_titular; 
     this.saldo = 0.0;
     this.numero = 0;
   }
 
   public Conta (int numero, String nome_titular, String cpf_titular) {
-    this.titular = new Cliente(nome_titular, cpf_titular);
+    this.nome_titular = nome_titular;
+    this.cpf_titular = cpf_titular;
+    this.saldo = 0;
     this.numero = numero;
   }
 
@@ -24,11 +30,7 @@ public abstract class Conta {
   public abstract void exibirDados();
 
   public int imprimirTipoConta() {
-    if(this.getClass() == ContaEspecial.class){
-        System.out.println("\nConta Especial\n");
-        return 1;
-    }
-    else if(this.getClass() == ContaPoupanca.class){
+    if(this.getClass() == ContaPoupanca.class){
         System.out.println("\nConta Poupanca\n");
         return 2;
     }
@@ -37,8 +39,12 @@ public abstract class Conta {
 
   // Setters e Getters
 
-  public void setTitular(Cliente titular) {
-    this.titular = titular;
+  public void setTitular(String nome_titular) {
+    this.nome_titular = nome_titular;
+  }
+
+  public void setCpfTitular(String cpf_titular) {
+    this.cpf_titular = cpf_titular;
   }
 
   public void setNum(int numero) {
@@ -46,7 +52,11 @@ public abstract class Conta {
   }
 
   public String getNome() {
-    return this.titular.getNome();
+    return this.nome_titular;
+  }
+
+  public String getCpfNome() {
+    return this.cpf_titular;
   }
 
   public double getSaldo() {

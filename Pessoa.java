@@ -1,4 +1,4 @@
-package interfaces;
+package CTExercicio1;
 
 public class Pessoa {
   private String nome, endereco;

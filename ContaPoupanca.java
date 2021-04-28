@@ -1,7 +1,9 @@
+package CTExercicio2;
+
 public class ContaPoupanca extends Conta implements Investimento {
 
-  ContaPoupanca(Cliente titular) {
-    super(titular);
+  ContaPoupanca(String nome_titular, String cpf_titular) {
+    super(nome_titular, cpf_titular);
   }
 
   ContaPoupanca(int numero, String nome_titular, String cpf_titular) {
@@ -21,9 +23,9 @@ public class ContaPoupanca extends Conta implements Investimento {
 
   @Override
   public void exibirDados() {
-    System.out.println("Nome do titular: " + this.titular.getNome());
-    System.out.println("Saldo: " + this.saldo);
-    System.out.println("Numero da conta: " + this.numero);
+    System.out.println("Nome do titular: " + this.getNome());
+    System.out.println("Saldo: " + this.getSaldo());
+    System.out.println("Numero da conta: " + this.getNumero());
   }
 
   public void reajustar(double percentual) {

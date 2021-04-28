@@ -1,4 +1,4 @@
-package interfaces;
+package CTExercicio1;
 
 public interface Atleta {
   public static final int i = 0;
