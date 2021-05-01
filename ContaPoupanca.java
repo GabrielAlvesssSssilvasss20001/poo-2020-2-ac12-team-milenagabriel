@@ -1,5 +1,3 @@
-package CTExercicio2;
-
 public class ContaPoupanca extends Conta implements Investimento {
 
   ContaPoupanca(String nome_titular, String cpf_titular) {

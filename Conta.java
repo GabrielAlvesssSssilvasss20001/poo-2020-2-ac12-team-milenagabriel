@@ -1,5 +1,3 @@
-package CTExercicio2;
-
 public abstract class Conta {
   public String nome_titular;
   public String cpf_titular;

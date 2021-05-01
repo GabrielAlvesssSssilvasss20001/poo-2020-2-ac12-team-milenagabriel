@@ -1,5 +1,3 @@
-package CTExercicio1;
-
 public class Triatleta extends Pessoa implements Nadador, Corredor, Ciclista {
 
   public Triatleta(){}

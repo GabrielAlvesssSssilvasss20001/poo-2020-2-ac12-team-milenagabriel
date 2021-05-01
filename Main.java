@@ -1,6 +1,3 @@
-import CTExercicio1.*;
-import CTExercicio2.*;
-
 public class Main {
   public static void main (String[] args) {
     // Questão 1:
@@ -22,6 +19,7 @@ public class Main {
     
     contaP.exibirDados();
     contaP.reajustar(20);
+    System.out.println("\nApós reajuste de 20%:\n");
     contaP.exibirDados();
   }
 }
